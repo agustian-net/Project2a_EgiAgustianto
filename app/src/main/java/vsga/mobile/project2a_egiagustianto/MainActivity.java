@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         kali =  findViewById(R.id.btnKali);
         bagi =  findViewById(R.id.btnBagi);
 
+        bersihkan = findViewById(R.id.btnBersihkan);
+
         hasil = findViewById(R.id.outHasil);
 
         tambah.setOnClickListener(v -> {

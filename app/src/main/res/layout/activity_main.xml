@@ -27,15 +27,15 @@
         android:layout_height="48dp"
         android:layout_marginTop="17dp"
         android:layout_marginBottom="16dp"
+        android:autofillHints="@string/masukkan_angka_pertama"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/masukkan_angka_pertama"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/inputAngkaKedua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtmasukkanangka"
-        android:autofillHints="@string/masukkan_angka_pertama"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -44,15 +44,15 @@
         android:layout_height="53dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
+        android:autofillHints="@string/masukkan_angka_kedua"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/masukkan_angka_kedua"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputAngkaPertama"
-        android:autofillHints="@string/masukkan_angka_kedua"
         tools:ignore="LabelFor" />
 
     <LinearLayout
@@ -73,24 +73,24 @@
 
         <Button
             android:id="@+id/btnTambah"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:backgroundTint="@color/grey"
             android:text="@string/tambah"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle"
             tools:targetApi="lollipop" />
 
         <Button
             android:id="@+id/btnKurang"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:backgroundTint="@color/grey"
             android:text="@string/kurang"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle"
             tools:targetApi="lollipop" />
 
     </LinearLayout>
@@ -108,42 +108,38 @@
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:targetApi="lollipop" />
+        tools:targetApi="lollipop"
+        tools:ignore="UnknownIdInLayout" />
 
     <TextView
         android:id="@+id/lblhasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="186dp"
-        android:layout_marginLeft="186dp"
+        android:layout_width="46dp"
+        android:layout_height="15dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="186dp"
-        android:layout_marginRight="186dp"
-        android:layout_marginBottom="27dp"
         android:text="@string/hasil"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/outHasil"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBersihkan"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/outHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="202dp"
-        android:layout_marginLeft="202dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="201dp"
-        android:layout_marginRight="201dp"
-        android:layout_marginBottom="174dp"
+        android:layout_width="179dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:text="@string/ouput"
+        android:textAlignment="center"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txthasil"
+        app:layout_constraintTop_toBottomOf="@+id/btnBersihkan"
+        app:layout_constraintVertical_bias="0.363"
         tools:ignore="UnknownIdInLayout" />
 
     <LinearLayout
@@ -160,30 +156,41 @@
         app:layout_constraintBottom_toTopOf="@+id/btnBersihkan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/inputAngkaKedua">
+        app:layout_constraintTop_toBottomOf="@+id/inputAngkaKedua"
+        app:layout_constraintVertical_bias="0.785">
 
         <Button
             android:id="@+id/btnKali"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:backgroundTint="@color/grey"
             android:text="@string/kali"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle"
             tools:targetApi="lollipop" />
 
         <Button
             android:id="@+id/btnBagi"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:backgroundTint="@color/grey"
             android:text="@string/bagi"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle"
             tools:targetApi="lollipop" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outHasil" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

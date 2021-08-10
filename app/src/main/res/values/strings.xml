@@ -7,7 +7,7 @@
     <string name="bagi">/</string>
     <string name="bersihkan">BERSIHKAN</string>
     <string name="hasil">HASIL</string>
-    <string name="ouput">0</string>
+    <string name="ouput" translatable="false">0</string>
     <string name="masukkan_angka_pertama">Masukkan angka pertama</string>
     <string name="masukkan_angka_kedua">Masukkan angka kedua</string>
 </resources>

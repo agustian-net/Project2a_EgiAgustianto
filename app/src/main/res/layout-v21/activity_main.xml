@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/txtmasukkanangka"
         android:layout_width="wrap_content"
@@ -28,13 +29,13 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/masukkan_angka_pertama"
+        android:hint="@string/masukkan_angka_pertama"
         app:layout_constraintBottom_toTopOf="@+id/inputAngkaKedua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtmasukkanangka"
-        android:autofillHints=""
+        android:autofillHints="@string/masukkan_angka_pertama"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -45,13 +46,13 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/masukkan_angka_kedua"
+        android:hint="@string/masukkan_angka_kedua"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputAngkaPertama"
-        android:autofillHints=""
+        android:autofillHints="@string/masukkan_angka_kedua"
         tools:ignore="LabelFor" />
 
     <LinearLayout
@@ -78,7 +79,8 @@
             android:backgroundTint="@color/grey"
             android:text="@string/tambah"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle" />
+            style="?android:attr/buttonBarButtonStyle"
+            tools:targetApi="lollipop" />
 
         <Button
             android:id="@+id/btnKurang"
@@ -88,7 +90,8 @@
             android:backgroundTint="@color/grey"
             android:text="@string/kurang"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle" />
+            style="?android:attr/buttonBarButtonStyle"
+            tools:targetApi="lollipop" />
 
     </LinearLayout>
 
@@ -104,44 +107,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:targetApi="lollipop"
+        tools:ignore="UnknownIdInLayout" />
 
     <TextView
-        android:id="@+id/txthasil"
-        android:layout_width="73dp"
-        android:layout_height="26dp"
+        android:id="@+id/lblhasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="186dp"
         android:layout_marginLeft="186dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="186dp"
         android:layout_marginRight="186dp"
-        android:layout_marginBottom="27dp"
         android:text="@string/hasil"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/outHasil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBersihkan"
         tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/outHasil"
-        android:layout_width="78dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="202dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="201dp"
-        android:layout_marginBottom="174dp"
-        android:text="@string/ouput"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txthasil"
-        android:textSize="28sp"
-        android:textAlignment="center"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -157,27 +141,42 @@
         app:layout_constraintBottom_toTopOf="@+id/btnBersihkan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/inputAngkaKedua">
+        app:layout_constraintTop_toBottomOf="@+id/inputAngkaKedua"
+        app:layout_constraintVertical_bias="0.785">
 
         <Button
             android:id="@+id/btnKali"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:backgroundTint="@color/grey"
             android:text="@string/kali"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle" />
+            tools:targetApi="lollipop" />
 
         <Button
             android:id="@+id/btnBagi"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
             android:backgroundTint="@color/grey"
             android:text="@string/bagi"
             android:textColor="@color/black"
-            style="?android:attr/buttonBarButtonStyle" />
+            tools:targetApi="lollipop" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/outHasil"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblhasil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
